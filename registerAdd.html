@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <link rel="stylesheet" href="./public/css/formStyle.css" />
+  </head>
+
+  <body>
+
+   
+
+      <header  class="form-titulo">
+        <h2>Registro de usuario</h2>
+      </header>
+
+      <main>
+        <section>
+          <article>
+            <form
+              class="registerForm"
+              action="/register"
+              method="POST"
+              id="formulario"
+            >
+              <div class="registerInput">
+                <input class="inputBox" 
+                type="text"
+                 placeholder=" Nombres"
+                  name="first_name"
+                id="first_name"
+                 value="" require   />
+                <p class="errores"></p>
+              </div>
+
+              <div class="registerInput">
+                <input
+                class="inputBox"
+                  type="text"
+                  placeholder="Apellido"
+                  name="last_name"
+                  id="last_name"
+                  value=""
+                  require
+                />
+                <p class="errores"></p>
+              </div>
+
+              <div class="registerInput">
+                <input
+                class="inputBox"
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  id="email"
+                  value=""
+                  require
+                />
+                <p class="errores"></p>
+              </div>
+
+              <div class="registerInput">
+                <input
+                class="inputBox"
+                  type="password"
+                  placeholder="Contraseña"
+                  name="pass"
+                  id="pass"
+                  require
+                />
+                <p class="errores"></p>
+              </div>
+
+              <div class="registerInput">
+                <input
+                class="inputBox"
+                  type="password"
+                  placeholder="Confirmar contraseña"
+                  name="repassword"
+                  id="repassword"
+                  require
+                />
+                <p class="errores"></p>
+              </div>
+
+              <div class="registerInput">
+                <select   class="inputBox" name="rol" id="rol">
+                  <option value="2">Visitante</option>
+                  <option value="3">Administrador</option>
+                </select>
+                <p class="errores"></p>
+              </div>
+
+              <div class="registerInput">
+                <input type="submit" value="REGISTRARSE" />
+
+                <p class="registerFormPregunta">
+                  ¿Ya tenés una cuenta? <a href="/login">Iniciar sesión</a>
+                </p>
+              </div>
+            </form>
+          </article>
+        </section>
+      </main>
+   
+
+    <script src="./public/js/registerValidator.js"></script>
+  </body>
+</html>

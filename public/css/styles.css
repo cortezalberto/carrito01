@@ -1,0 +1,263 @@
+
+/*====== Fonts ======*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+
+/*====== Variables ======*/
+:root {
+  --yellow: #EAC926;
+  --dark-blue: #03264C;
+  --light-blue: #1259c3;
+  --gray: #666666;
+  --light-gray: #ebebeb;
+  --green: #39b54a;
+  --base-font-family: 'Roboto', sans-serif
+}
+
+
+
+/* Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--base-font-family);
+  font-weight: 300;
+  background-color: var(--light-gray);
+}
+
+ul {
+
+  list-style:none;
+}
+
+a {
+  color: rgba(15, 15, 15, 0.904);
+  text-decoration: none;
+}
+a:hover {
+  border-bottom: 2px solid rgb(182, 178, 178);
+}
+
+/* Los a en blanco y sin el underline*/
+.nav-main  {
+  background-color: #ffffff;
+
+  /* Sobre escribe los pixels del body*/
+  font-size: 27px;
+    /* Afecta a las clases que abarca, 3 Imagen y las 2 listas*/
+  display: flex;
+
+  justify-content:space-between;
+
+  height: 60px;
+  padding: 20px 0;
+  align-items: center;
+
+}
+
+nav-main-busqueda  {
+  font-size: 27px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.header__search{
+  width:400px;
+
+height: 30px;
+  font-size: 14px;
+  border: solid 2px rgb(197, 191, 191);
+  padding: 6px;
+  border-radius: 5px;
+  text-align: center;
+  margin-right:7px ;
+  margin-left:7px ;
+}
+
+
+
+
+/* Achico la imagen a 50 pixel */
+.nav-brand {
+  background-color: chocolate;
+  width: 200px;
+}
+
+
+/* Para que ocupe el 90 por ciento de la pantalla y centrado su contenido*/
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* Se cre un flex para que las LI estén horizontales*/
+.nav-main ul  {
+display: flex;
+
+}
+
+.nav-main-menu ul {
+  background-color: #f6f3f3ef;
+  display: flex;
+  justify-content:space-around; 
+  
+  height: 50px;
+  padding: 20px 0;
+  align-items: center; 
+  }
+/* Separamos los títulos*/
+.nav-main ul li  {
+ padding: 10px;
+}
+
+.visitados{
+  margin-top: 20px;
+}
+/* ------------------------------*/
+.news-cards{
+  display: grid;
+  background-color: rgb(241, 247, 247);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* --------------para el Detail---------*/
+.news-cards1{
+  
+  background-color: rgb(241, 247, 247);
+
+
+  margin: 10px 0;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.news-cards1 img {
+  width: 50%;
+  height: 50%;
+  
+}
+
+
+.cajaDetail{
+  display:flex;
+  justify-content:space-around;
+}
+
+.cajaPie{
+  padding-top:30px;
+  padding-bottom:30px;
+}
+.news-cards article {
+
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.news-cards img {
+  width: 100%;
+  height: 180px;
+  
+}
+.news-cards h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.vinculo {
+  padding: 10px 0;
+  color: #5af114;
+  text-transform: uppercase;
+  
+  font-weight: bold;
+}
+
+.articulo:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+i.fa-shopping-cart:hover{
+  color: #e0218a;
+  transition-property: all;
+  transition-duration: 200ms;
+}
+
+
+i.fa-heart:hover{
+  color:rgb(243, 44, 44);
+  transition-property: all;
+  transition-duration: 200ms;
+}
+ 
+
+.footer-card {
+display:flex;
+justify-content:space-between;
+align-items: center;
+}
+
+
+/* ------------------------------*/
+.section-footer{
+  display: grid;
+  background-color: white;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 70px 0;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.main-footer {
+  background-color: #ffffff;
+  padding: 20px 0;
+  margin-top: 80px;
+}
+
+.footer-data {
+  text-align: center;
+}
+
+.footer-data i {
+  color: var(--light-blue);
+  font-size: 3.5em;
+}
+
+.footer-data h2 {
+  color: var(--gray);
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+.footer-data p {
+  color: var(--gray);
+  font-size: 1.0em;
+  font-weight: 300;
+}
+
+.sub-footer {
+  border-top: 1px solid var(--light-gray);
+  background-color: #ffffff;
+}
+
+.sub-footer p {
+  margin: 0;
+  color: var(--gray);
+  padding: 15px 0;
+}
+
+
+
+
+
+
+
+

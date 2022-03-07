@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <link rel="stylesheet" href="./public/css/formStyle.css" />
+  </head>
+
+  <body>
+
+   
+
+      <header  class="form-titulo">
+        <h2>Registro de Propiedades</h2>
+      </header>
+
+      <main>
+        <section>
+          <article>
+            <form
+              class="registerForm"
+              action="/register"
+              method="POST"
+              id="formulario"
+            >
+          
+         
+              <div class="registerInput">
+                <input 
+                 type="text"
+                  placeholder=" Nombre y Apellido del Propietario" 
+                  name="propietario"
+                id="propietario" 
+                value="" require />
+                <p class="errores"></p>
+              </div>
+
+              <div class="registerInput">
+                <input
+               
+                  type="number"
+                  placeholder="Precio"
+                  name="precio"
+                  id="precio"
+                  value=""
+                  require
+                />
+                <p class="errores"></p>
+              </div>
+
+              
+             
+              
+
+              <div class="registerInput">
+                <select   name="zona" id="zona">
+                  <option value="1">Caballito</option>
+                  <option value="2">Almagro</option>
+                  <option value="3">Flores</option>
+                </select>
+                <p class="errores"></p>
+              </div>
+
+              <div class="registerInput">
+                <select   name="status" id="status">
+                  <option value="1">Alquiler</option>
+                  <option value="2">Venta</option>
+                </select>
+                <p class="errores"></p>
+              </div>
+
+              <div class="registerInput">
+                <select   name="tipoVivienda" id="tipoVivienda">
+                  <option value="1">Casa</option>
+                  <option value="2">Departamento</option>
+                </select>
+                <p class="errores"></p>
+              </div>
+
+              <div class="registerInput">
+                <input type="submit" value="AGREGAR" />
+
+                
+              </div>
+            </form>
+          </article>
+        </section>
+      </main>
+   
+
+    <script src="./public/js/propiedadValidator.js"></script>
+  </body>
+</html>

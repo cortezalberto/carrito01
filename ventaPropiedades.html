@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechNews</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css
+        "
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./public/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="nav-main">
+        <img src="./public/img/logo.jpg" alt="milogo" class="nav-brand" />
+
+        <!-- Right Nav -->
+        <ul class="nav-main-busqueda">
+          <li>
+            <form action="/search" method="GET" class="header__form">
+              <select name="select">
+                <option value="value1" selected>Todo</option>
+                <option value="value2">Venta</option>
+                <option value="value3">Alquiler</option>
+              </select>
+              
+              <input
+                type="text"
+                name="search"
+                class="header__search"
+                placeholder="Buscar productos"
+              />
+
+              <button type="submit" class="header__lupa">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </li>
+        </ul>
+
+        <ul class="nav-main-iconos">
+          <li>
+            <a href="register.html"><i class="fas fa-user-circle"></i> </a>
+          </li>
+
+          <li>
+            <a href="/shopping-cart"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+          <li>
+            <a href="register.html"><i class="fas fa-heart"></i> </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="nav-main-menu">
+        <ul class="nav-menu">
+          <li>
+            <a href="propiedadesAdd.html"> Agregar propiedad</a>
+          </li>
+          <li>
+            <a href=""> Venta Propiedades</a>
+          </li>
+          <li>
+            <a href="">Alquiler Propiedades</a>
+          </li>
+        </ul>
+      </nav>
+
+      <header class="form-titulo"></header>
+      <main>
+        <!-- NEWS CARDS -->
+        <h2 class="visitados">Casas en Venta</h2>
+        <section class="news-cards" id="seccionVentas">
+            
+<!-- ACA SE INYECTA DINAMICAMENTE DEL ARRAY -->
+
+        </section>
+
+        
+
+    <footer class="main-footer">
+      <div class="container">
+        <section class="section-footer">
+          <article class="footer-data">
+            <i class="fas fa-credit-card"></i>
+            <h2>Pagá con tarjeta o en efectivo</h2>
+            <p>
+              Acá pongo zaraza
+            </p>
+          </article>
+
+          <article class="footer-data">
+            <i class="fas fa-gift"></i>
+            <h2>Envío gratis desde $ 1.999</h2>
+            <p>
+                Acá pongo zaraza.
+            </p>
+          </article>
+
+          <article class="footer-data">
+            <i class="fas fa-user-shield"></i>
+            <h2>Seguridad, de principio a fin</h2>
+            <p>
+                Acá pongo zaraza
+            </p>
+          </article>
+        </section>
+      </div>
+    </footer>
+    <div class="sub-footer">
+      <div class="container">
+        <p>Copyright © 2022 Gonzalo Cortez</p>
+      </div>
+    </div>
+    <script type="module" src="./public/js/main.js"></script>
+  </body>
+</html>

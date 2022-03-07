@@ -1,0 +1,89 @@
+
+/* =================== FORM ========================= */
+
+input:required:invalid {
+    border: solid red 1px;
+}
+
+input:required:valid {
+    border: solid rgb(78, 245, 78) 1px;
+}
+
+.form-titulo {
+    text-align: center;
+    color: #3a6351;
+    margin: 20px;
+    font-size: 15px;
+}
+
+h4 {
+    margin: 10px 0 20px 0;
+    font-size: 15px;
+    text-align: center;
+}
+.registerInput {
+    text-align: center;
+    max-width: 550px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+
+input {
+    padding: 10px 5px;
+    border-radius: 10px;
+    margin: 10px;
+    min-width: 255px;
+    width: 100%;
+background-color:#def5e1;
+}
+select{
+    padding: 10px 5px;
+    border-radius: 10px;
+    margin: 10px;
+    min-width: 255px;
+    width: 100%;
+background-color:#def5e1;
+}
+
+
+.is-invalid {
+    border: solid 1px #e48257;
+}
+
+
+
+
+.form-link {
+    padding: 20px;
+    text-align: center;
+}
+
+button a {
+    text-decoration: none;
+}
+
+button a:visited {
+    text-decoration: none;
+    color: white;
+
+}
+
+button {
+    text-decoration: none;
+    background-color: #3a6351;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.button {
+    text-decoration: none;
+    text-align: center;
+}
+
+.button button:hover {
+    background-color: #70b195;
+    transition: 300ms;
+}

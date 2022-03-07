@@ -1,0 +1,85 @@
+[
+    {
+       
+        "id": "1",
+        "tipo": "casa",
+        "zona": "Caballito",
+        "status": "venta",
+       "precio": 30000,
+        "imagen": "./public/img/foto1.webp",
+        "Descripcion": "Casa con 3 ambientes y 2 baños",
+        "propietario": " juan Sosa"
+    },
+    {
+        "id": "2",
+        "tipo": "casa",
+        "zona": "Caballito",
+        "status": "venta",
+       "precio": 40000,
+        "imagen": "./public/img/foto2.webp",
+        "Descripcion": "Casa con 3 ambientes y 2 baños",
+        "propietario": " Maria Perez"
+    },
+    {
+        "id": "3",
+        "tipo": "casa",
+        "zona": "Caballito",
+        "status": "venta",
+       "precio": 10000,
+        "imagen": "./public/img/foto3.jpg",
+        "Descripcion": "Casa con 3 ambientes y 2 baños",
+        "propietario": "Fernando Kotlic"
+    },
+
+    {
+        "id": "4",
+        "tipo": "casa",
+        "zona": "Caballito",
+        "status": "venta",
+       "precio": 30000,
+        "imagen": "./public/img/foto4.jpg",
+        "Descripcion": "Ale Bonil"
+    },
+    {
+        "id": "5",
+        "tipo": "casa",
+        "zona": "Caballito",
+        "status": "alquiler",
+       "precio": 20000,
+        "imagen": "./public/img/foto6.webp",
+        "Descripcion": "Pedro Andrade"
+    },
+    {
+        "id": "6",
+        "tipo": "casa",
+        "zona": "Caballito",
+        "status": "alquiler",
+       "precio": 23456,
+        "imagen": "./public/img/foto7.webp",
+        "Descripcion": "Casa con 3 ambientes y 2 baños",
+        "propietario": " Felix Luna"
+    },
+    {
+        "id": "7",
+        "tipo": "casa",
+        "zona": "Caballito",
+        "status": "alquiler",
+       "precio": 45000,
+        "imagen": "./public/img/foto8.webp",
+        "Descripcion": "Casa con 3 ambientes y 2 baños",
+        "propietario": "Susana  Gimenez"
+    },
+
+    {
+        "id": "8",
+        "tipo": "casa",
+        "zona": "Caballito",
+        "status": "alquiler",
+       "precio": 7000,
+        "imagen": "./public/img/foto9.jpg",
+        "Descripcion": "Casa con 3 ambientes y 2 baños",
+        "propietario": "Carlos Soria"
+    }
+    
+]
+
