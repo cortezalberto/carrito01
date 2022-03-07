@@ -77,8 +77,6 @@ let emailValidator = () => {
   // Si el usuario no valida sobreescribo feedback
   if (email.value.trim() == "") {
     feedback = "El email no puede estar vacio";
-  } else if (!/\S+@\S+\.\S+/.test(email.value)) {
-    feedback = "El email debe ser valido";
   }
 
   // Si existe error se almacena en objeto errors
@@ -100,22 +98,14 @@ let passValidator = () => {
 
   if (pass.value.trim() == "") {
     feedback = "La contraseña no puede estar vacia";
-  } else if (
-    !/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/.test(
-      password.value
-    )
-  ) {
-    feedback =
-      "Tu contraseña debe contener una mayuscula, minuscula, numero y caracter especial";
-  } else if (pass.value.trim() < 8) {
-    feedback = "La contraseña no puede tener menos de 8 caracteres";
-  }
+  } 
+  
 
   if (feedback) {
     pass.classList.add("error-input");
     errors.pass = feedback;
   } else {
-    passd.classList.remove("error-input");
+    pass.classList.remove("error-input");
     delete errors.pass;
   }
 
@@ -128,7 +118,7 @@ let repasswordValidator = () => {
 
   if (repassword.value == "") {
     feedback = "Debes confirmar tu contraseña";
-  } else if (repassword.value !== password.value) {
+  } else if (repassword.value !== pass.value) {
     feedback = "Las contraseñas no coinciden";
   }
 
@@ -161,7 +151,7 @@ formu.addEventListener("submit", (e) => {
   if (Object.keys(errors).length) {
     e.preventDefault();
   } else {
-    alert(`Se cargó el nuevo propiedad ${propietario.value}`);
+    alert(`Se cargó el nuevo usuario`);
   }
 });
 

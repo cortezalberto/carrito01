@@ -10,8 +10,6 @@ const tipoVivienda = document.getElementById("tipoVivienda");
 
 // Declaro las Funciones
 
-
-
 let propietarioValidator = () => {
   // Declaro string vacio que contendra mensaje de error
   let feedback = "";
@@ -97,33 +95,8 @@ formu.addEventListener("submit", (e) => {
     e.preventDefault();
 
   } else {
-    alert(`Se cargó el nuevo propiedad ${propietario.value}`);
-    
-// Creo un registro auxiliar de propiedad para grabar en local storage
-    const propiedad = {
-      tipo: 0,
-      zona: "",
-      status: "",
-      precio: 0,
-      imagen: "",
-      descripcion: "",
-      propietario: "",
-    };
-    // Tomo los valores del formulario y los cargo en el objeto literal
-    propiedad.tipo = tipoVivienda.value
-    propiedad.zona = zona.value
-    propiedad.status = status.value
-    propiedad.precio = precio.value;
-    propiedad.propietario = propietario.value;
- 
- // Convierto el objeto literal en Json
-    console.log(JSON.stringify(propiedad));
-
-    const convAJson = JSON.stringify(propiedad)
-
-    // Almaceno el objeto literal en la local Storage
-      localStorage.setItem( 'Propiedad', convAJson )
-  }
+    alert(`Se cargó el nuevo propiedad`);
+  }  
 });
 
 // Si focus se sale del input se ejecuta funcion validacion

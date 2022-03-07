@@ -1,15 +1,10 @@
 window.onload = () => {
-  let carrito = {
 
-  }
-  // Preguntamos si existe la clave carrito en el localstorage
-
-  if (localStorage.getItem('carritoClave')) {
-    // leo y convierto a JS y se cargan los datos grabados
-    carrito = JSON.parse(localStorage.getItem('carritoClave'))
-    console.log(carrito)
-  }
-  // Acá desarrollaré todos las funciones del sitio
+//----------------ZONA DE DEFINICION DE FUNCIONES ---------------
+  // Esta función, atrapa las secciones del Html, ventas y alquiler
+  // Lee la base de datos del Json 
+  // Crea dinámicamente el artículo en Html para
+  // Inyecta en cada sección según corresponda los artículos
   function listarTodo() {
     // Atrapo las secciones del HTML
 
@@ -79,7 +74,12 @@ window.onload = () => {
   }
 
   //-----------------FUNCIONES PARA EL CARRITO --------------------
-  //--------------------------------------------------------
+  //----AgregarAlCarrito, recibe un evento que lo origina por click
+  // es decir si hacemos click en cualquier posición del artículo de la´
+  // sabremos quién lo origina. Fundamentalmente queremos conocer que el evento 
+  // que lo origina pertenece a la clase carrito-logo"
+  // ESTO NOS INDICA QUE SE HIZO CLICK EN EL LOGO DEL CARRITO 
+  // existen 2 niveles de pader para llegar a Articulo 
 function agregarAlCarrito(e){
 
     console.log(e.target)
@@ -99,11 +99,14 @@ function agregarAlCarrito(e){
    
 }
 
+// -----FUNCION unItemAlCarrito
+// Se recibe el html de Articulo
 function unItemAlCarrito(objeto){
   //  console.log("estoy agregando un item al carrito")
 console.log(objeto)
-console.log("Grego un item")
-//console.log(unItem.document.getquerySelector("h3"))
+console.log("AGrego un item")
+//Armamos un registro auxiliar mellizo del carrito de compras
+// Cargamos los valores de sus propiedades
 const producto = {
 
   id: objeto.querySelector(".propiedadId").value,
@@ -112,22 +115,44 @@ const producto = {
   descripcion: objeto.querySelector("p").textContent,
   cantidad: 1
 }
-// pregunto si existe esa clave para que sume una unidadr
+// pregunto si existe esa clave para que sume una unidad
+// como la primera vez no hay nada en el carrito no se suma nada
    if (carrito.hasOwnProperty(producto.id) ) {
     producto.cantidad = carrito[producto.id].cantidad +1
    }  
 
    //Copio del array auxiliar en ráfaga al carrito
+   // Recordamos que carrito estaba vacío
    carrito[producto.id] = {...producto}  
    console.log(carrito)
-// Grabo en localStorage el carrito
+
+// Grabo en localStorage el carrito, pasándolo a Json
 localStorage.setItem('carritoClave', JSON.stringify(carrito))
+// FALTA PASAR LOS DATOSDEL CARRITO AL HTML
+
 }
 
+
+  //--------Comienza el flujo de instrucciones
+  //-----------------------------------------------------------
+   // creo el objeto literal en blanco, luego inyectaré sus atributos
+   let carrito = {
+
+  }
+  
+  // Preguntamos si existe la clave carrito en el localstorage
+// la primera vez es obvio que dará false, porque no compré nada
+  if (localStorage.getItem('carritoClave')) {
+    // leo y convierto a JS y se cargan los datos grabados
+    carrito = JSON.parse(localStorage.getItem('carritoClave'))
+    console.log(carrito)
+  }
+ 
 
   //-----------LLAMADA PRINCIPAL
   // -- Acá se lee la base de datos y se inyecta dinámicamente el html
   // Se espera las acciones del usuario
+   // creo el objeto literal en blanco, luego inyectaré sus atributos
   listarTodo();
  
 
